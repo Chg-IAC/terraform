@@ -64,16 +64,56 @@ variable "vm_domain" {
 variable "vm_netmask" {
   default = "24"
 }
-variable "auto" {
+
+variable "master-nodes" {
     type = map
     default = {
-	"PARLBC001MP" = "10.0.2.50"
-        "PARLBC001WP" = "10.0.2.51"
         "PARK8S001MP" = "10.0.2.52"
-        "PARK8S002MP" = "10.0.2.53"
-        "PARK8S001WP" = "10.0.2.54"
-        "PARK8S002WP" = "10.0.2.55"
-        "PARK8S003WP" = "10.0.2.56"
+       # "PARK8S002MP" = "10.0.2.53"
     }
 }
+
+variable "worker-nodes" {
+    type = map
+    default = {
+        "PARK8S001WP" = "10.0.2.54"
+        "PARK8S002WP" = "10.0.2.55"
+        #"PARK8S003WP" = "10.0.2.56"
+    }
+}
+
+variable "lb-nodes" {
+    type = map
+    default = {
+        "PARLBC001MP" = "10.0.2.50"
+        "PARLBC001WP" = "10.0.2.51"
+    }
+}
+
+
+###########Ressource TAg#############
+
+variable "K8S_tag" {
+  default = "K8S"
+  
+}
+
+variable "LBC_tag" {
+  default = "LBC"
+  
+}
+
+variable "Master_attrubute_name" {
+  default = "Master"
+  
+}
+
+variable "Worker_attrubute_name" {
+  default = "Worker"
+  
+}
+
+
+
+
 #####################################################################
