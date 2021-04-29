@@ -7,7 +7,7 @@ variable "vsphere_user" {
 variable "vsphere_password" {
     description ="vsphere_password"
     type = string
-    default ="Espoir123."
+    default ="password"
 }
 variable "vsphere_server" {
     description ="vsphere_server"
